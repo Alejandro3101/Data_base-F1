@@ -1,0 +1,14 @@
+
+use F1
+
+db.createCollection("Pilotos")
+db.createCollection("Escuderias")
+db.createCollection("Carreras")
+db.createCollection("Resultados")
+db.createCollection("Posiciones_Pilotos")
+db.createCollection("Posiciones_Escuderias")
+db.createCollection("Jueces")
+
+
+show collections
+
