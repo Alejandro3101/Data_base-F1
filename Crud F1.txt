@@ -1,0 +1,57 @@
+
+-- Insertar Carreras :
+
+db.Carreras.insertMany([{"Pais":"España","Nombre":"Circuito de Montmeló","Cantidad_vueltas":66,"FechaInicio":"2022-04-01","FechaFin":"2022-04-04"}])
+
+db.Carreras.insertMany([{"Pais":"Abu Dhabi - Emiratos Árabes Unidos","Nombre":"Yas Marina Circuit","Cantidad_vueltas":58,"FechaInicio":"2022-05-08","FechaFin":"2022-05-11"}])
+
+db.Carreras.insertMany([{"Pais":"Monaco","Nombre":"Circuito de Mónaco, Montecarlo","Cantidad_vueltas":78,"FechaInicio":"2022-05-07","FechaFin":"2022-05-10"}])
+
+-- Insertar equipos : 
+
+db.Escuderias.insertMany([{"Nombre":"Hass","Pais":"Estados Unidos","Chasis":"VF-22","Motor":"Ferrari","Neumaticos":"Pireli"}])
+
+db.Escuderias.insertMany([{"Nombre":"Alpine","Pais":"Francia","Chasis":"FA522","Motor":"Renault","Neumaticos":"Pireli"}])
+
+db.Escuderias.insertMany([{"Nombre":"Alpa Romeo","Pais":"Suiza","Chasis":"C42","Motor":"Ferrari","Neumaticos":"Pireli"}])
+
+--Insertar Pilotos :
+
+db.Pilotos.insertMany([{"Nombre":"Lewis Hamilton","Edad":37,"Pais":"Reino Unido","Debut":2007,"Equipo":"Mercedes Amg"}])
+
+db.Pilotos.insertMany([{"Nombre":"Sebastian Vettel","Edad":35,"Pais":"Alemania","Debut":2007,"Equipo":"Aston Martin"}])
+
+db.Pilotos.insertMany([{"Nombre":"Max Verstappen","Edad":24,"Pais":"Paises bajos","Debut":2015,"Equipo":"Red bull"}])
+
+
+--Insertar Posicion_Escuderia :
+
+db.Posiciones_Escuderias.insertMany([{"Nombre_escuderia":"Mercedes Amg","Puesto":"1°","Puntos":"425"}])
+db.Posiciones_Escuderias.insertMany([{"Nombre_escuderia":"Red Bull","Puesto":"2°","Puntos":"400"}])
+db.Posiciones_Escuderias.insertMany([{"Nombre_escuderia":"Ferrari","Puesto":"3°","Puntos":"350"}])
+db.Posiciones_Escuderias.insertMany([{"Nombre_escuderia":"Mclaren","Puesto":"4°","Puntos":"250"}])
+
+--Insertar PosicionPilotos :
+
+db.Posiciones_Pilotos.insertMany([{"Nombre_Piloto":"Daniel Ricciardo","Escuderia":"Mclaren","Puesto":"10°","Puntos":"80"}])
+
+-- Insertar resultados :
+
+db.Resultados.insertMany([{
+"Circuito":"Circuito Urbano Marina Bay- Singapur",
+"Pais":"Singapur",
+"1°":"Lewis Hamiilton - Mercedes Amg - 25 Puntos",
+"2°":"Max Verstappen - Red Bull - 18 Puntos",
+"3°":"Charles Leclerc - Ferrari - 15 Puntos",
+"4°":"Sergio Pérez - Red Bull - 12 Puntos",
+"5°":"George Russell - Mercedes Amg - 10 Puntos",
+"6°":"Lando Norris - Mclaren - 8 Puntos",
+"7°":"Carlos Sainz Jr. - Ferrari - 6 Puntos",
+"8°":"Fernando Alonso - Alpine - 4 Puntos",
+"9°":"Mick Schumacher - Hass - 2 Puntos",
+"10°":"Sebastian Vettel - Aston Martin - 1 Puntos"}])
+
+
+--Insertar Jueces : 
+
+db.Jueces.insertMany([{"Nombre":"Federación Internacional del Automóvil","Siglas":"FIA","Sede":"Plaza de la Concordia, París","Fundacion":"20 junio 1904","Detalles":"La FIA es el órgano rector del deporte automovilístico mundial y la federación de las principales organizaciones automovilísticas del mundo"}])
