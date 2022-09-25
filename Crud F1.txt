@@ -7,6 +7,19 @@ db.Carreras.insertMany([{"Pais":"Abu Dhabi - Emiratos Árabes Unidos","Nombre":"
 
 db.Carreras.insertMany([{"Pais":"Monaco","Nombre":"Circuito de Mónaco, Montecarlo","Cantidad_vueltas":78,"FechaInicio":"2022-05-07","FechaFin":"2022-05-10"}])
 
+
+
+--Actualizar Carreras :
+
+	db.Carreras.updateOne({"Pais":"España"}, {$set: {"FechaInicio":"2022-04-15", "FechaFin" : "2022-04-19"}})
+
+
+--Eliminar Carreras:
+
+db.Carreras.remove({"Pais":"España"})
+
+
+
 -- Insertar equipos : 
 
 db.Escuderias.insertMany([{"Nombre":"Hass","Pais":"Estados Unidos","Chasis":"VF-22","Motor":"Ferrari","Neumaticos":"Pireli"}])
@@ -15,6 +28,15 @@ db.Escuderias.insertMany([{"Nombre":"Alpine","Pais":"Francia","Chasis":"FA522","
 
 db.Escuderias.insertMany([{"Nombre":"Alpa Romeo","Pais":"Suiza","Chasis":"C42","Motor":"Ferrari","Neumaticos":"Pireli"}])
 
+
+--Actualizar Equipos :
+
+db.Escuderias.updateOne({"Nombre":"Hass"}, {$set: {"Pais":"Malasia","Chasis":"Rp-54"}})
+
+--Eliminar Equipos : 
+
+ db.Escuderias.remove({"Nombre":"Alpine"})
+
 --Insertar Pilotos :
 
 db.Pilotos.insertMany([{"Nombre":"Lewis Hamilton","Edad":37,"Pais":"Reino Unido","Debut":2007,"Equipo":"Mercedes Amg"}])
@@ -22,6 +44,18 @@ db.Pilotos.insertMany([{"Nombre":"Lewis Hamilton","Edad":37,"Pais":"Reino Unido"
 db.Pilotos.insertMany([{"Nombre":"Sebastian Vettel","Edad":35,"Pais":"Alemania","Debut":2007,"Equipo":"Aston Martin"}])
 
 db.Pilotos.insertMany([{"Nombre":"Max Verstappen","Edad":24,"Pais":"Paises bajos","Debut":2015,"Equipo":"Red bull"}])
+
+
+--Actualizar pilotos:
+
+db.Pilotos.updateOne({"Nombre":"LewisHamilton"},{$set:{"Edad":40,"Pais":"Colombia","Debut":2014}})
+
+-- Eliminar pilotos : 
+
+db.Pilotos.remove({"Nombre":"Lewis Hamilton"})
+db.Pilotos.remove({"Nombre":"Sebastian Vettel"})
+
+
 
 
 --Insertar Posicion_Escuderia :
