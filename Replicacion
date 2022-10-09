@@ -1,0 +1,20 @@
+Creación del Replicase: 
+
+MiejReplicaSet = new ReplSetTest ({name: “MireplicaSet”, nodes: 3})
+
+Arrancar los procesos mongod de la replica:
+MiejReplicaSet.startSet()
+
+Arrancar el proceso de replica
+MiejReplicaSet.initiate()
+
+Prueba del grupo de replica
+conn=new Mongo(“Alejandro:20000”)
+testDB=conn.getDB(“F1”)
+
+testDB.isMaster()
+
+Insertar un conjunto de datos en el nodo primario
+testDB.Pilotos.insert( { "Nombre":"Lewis Hamilton","Edad":37,"Pais":"Reino Unido","Debut":2007,"Equipo":"Mercedes Amg"});
+
+testDB.Pilotos.count()
